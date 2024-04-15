@@ -42,14 +42,14 @@ git clone https://github.com/waqaskhanroghani/MyEventPlanner.git
 2. Install dependencies:
 
 ```
-cd react-native-event-planner
-npm install
+cd MyEventPlanner
+yarn add
 ```
 
 3. Run the app:
 
 ```
-npm start
+yarn start
 ```
 
 4. Open the app on your device or emulator.
