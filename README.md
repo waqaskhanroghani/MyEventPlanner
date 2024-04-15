@@ -12,6 +12,7 @@ This project is aimed at beginners who want to learn how to design screens and i
 - Profile screen to display user details and edit profile functionality
 
 ## Screenshots 
+![Simulator Screen Shot - iPhone X - 2024-04-16 at 01 12 49](https://github.com/waqaskhanroghani/MyEventPlanner/assets/72159415/b301b318-1b69-46f3-95ea-e650e7d377ce)
 
 
 
