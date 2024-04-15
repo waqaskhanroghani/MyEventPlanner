@@ -1,14 +1,12 @@
 import {View, Text, SafeAreaView} from 'react-native';
 import React from 'react';
 import {PaperProvider} from 'react-native-paper';
-import CardExchange from './src/screens/CardExchange';
-import Onboarding from './src/screens/Onboarding';
-import Wallet from './src/screens/Wallet';
 import TabNavigation from './src/navigation/TabNavigation';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import Routes from './src/navigation/Routes';
-import {ExpenseProvider} from './src/context/ExpenseContext';
+import {EventProvider} from './src/context/EventContext';
+
 import Home from './src/screens/home';
 import CreateEvent from './src/screens/createEvent';
 import AllEvents from './src/screens/AllEvents';
@@ -19,7 +17,7 @@ export default function App() {
     <SafeAreaView style={{flex: 1}}>
       <NavigationContainer>
         <PaperProvider>
-          <ExpenseProvider>
+          <EventProvider>
             <Stack.Navigator>
               <Stack.Screen
                 name={Routes.TABNAVIGATOR}
@@ -43,7 +41,7 @@ export default function App() {
                 }}
               />
             </Stack.Navigator>
-          </ExpenseProvider>
+          </EventProvider>
         </PaperProvider>
       </NavigationContainer>
     </SafeAreaView>
