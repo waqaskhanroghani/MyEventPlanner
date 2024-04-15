@@ -34,13 +34,13 @@ export default function Home({navigation}) {
           <Button
             mode="contained"
             style={styles.button}
-            onPress={() => navigation.navigate('Settings')}>
+            onPress={() => navigation.navigate(Routes.SETTINGS)}>
             Settings
           </Button>
           <Button
             mode="contained"
             style={styles.button}
-            onPress={() => navigation.navigate('Profile')}>
+            onPress={() => navigation.navigate(Routes.PROFILE)}>
             Profile
           </Button>
         </View>

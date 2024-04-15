@@ -10,6 +10,8 @@ import {EventProvider} from './src/context/EventContext';
 import Home from './src/screens/home';
 import CreateEvent from './src/screens/createEvent';
 import AllEvents from './src/screens/AllEvents';
+import Settings from './src/screens/settings';
+import Profile from './src/screens/profile';
 const Stack = createStackNavigator();
 
 export default function App() {
@@ -36,6 +38,20 @@ export default function App() {
               <Stack.Screen
                 name={Routes.ALLEVENTS}
                 component={AllEvents}
+                options={{
+                  headerShown: false,
+                }}
+              />
+              <Stack.Screen
+                name={Routes.SETTINGS}
+                component={Settings}
+                options={{
+                  headerShown: false,
+                }}
+              />
+              <Stack.Screen
+                name={Routes.PROFILE}
+                component={Profile}
                 options={{
                   headerShown: false,
                 }}
