@@ -50,7 +50,12 @@ export const EventProvider = ({children}) => {
 
   // Function to delete an event
   const deleteEvent = eventId => {
-    setEvents(events.filter(event => event.id !== eventId));
+    const eventIndex = events.findIndex(event => event.id === eventId);
+    if (eventIndex !== -1) {
+      const updatedEvents = [...events];
+      updatedEvents.splice(eventIndex, 1);
+      setEvents(updatedEvents);
+    }
   };
 
   // Context value
