@@ -1,3 +1,4 @@
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import React, {createContext, useContext, useState, useEffect} from 'react';
 
 // Create a new context
@@ -44,6 +45,7 @@ export const EventProvider = ({children}) => {
   // Function to add a new event
   const addEvent = newEvent => {
     setEvents([...events, newEvent]);
+    console.log('new event added:', newEvent);
   };
 
   // Function to delete an event

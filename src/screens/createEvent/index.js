@@ -1,3 +1,4 @@
+import React, {useState} from 'react';
 import {
   View,
   Text,
@@ -7,10 +8,10 @@ import {
   Dimensions,
   TouchableOpacity,
 } from 'react-native';
-import React, {useState} from 'react';
 import {Button} from 'react-native-paper';
-import Icon from 'react-native-vector-icons/Ionicons'; // Import Ionicons from react-native-vector-icons
+import Icon from 'react-native-vector-icons/Ionicons';
 import colors from '../../config/colors';
+import {useEventContext} from '../../context/EventContext';
 
 export default function CreateEvent({navigation}) {
   const [eventName, setEventName] = useState('');
@@ -19,6 +20,8 @@ export default function CreateEvent({navigation}) {
   const [location, setLocation] = useState('');
   const [description, setDescription] = useState('');
 
+  const {addEvent} = useEventContext();
+
   const handleCreateEvent = () => {
     // Basic form validation
     if (!eventName || !date || !time || !location) {
@@ -26,15 +29,26 @@ export default function CreateEvent({navigation}) {
       return;
     }
 
-    // Proceed with creating the event
-    // You can add your logic here
+    // Create new event object
+    const newEvent = {
+      eventName,
+      date,
+      time,
+      location,
+      description,
+    };
+
+    // Add new event to context API
+    addEvent(newEvent);
+
+    // Navigate back
+    navigation.goBack();
   };
 
   return (
     <ImageBackground
       style={styles.container}
       source={require('../../Assets/images/bg4.png')}>
-      {/* Back Button */}
       <TouchableOpacity
         style={styles.backButton}
         onPress={() => navigation.goBack()}>
@@ -42,35 +56,30 @@ export default function CreateEvent({navigation}) {
       </TouchableOpacity>
       <View style={styles.content}>
         <Text style={styles.title}>Create Event</Text>
-        {/* Event Name */}
         <TextInput
           style={styles.input}
           placeholder="Event Name"
           value={eventName}
           onChangeText={text => setEventName(text)}
         />
-        {/* Date */}
         <TextInput
           style={styles.input}
           placeholder="Date"
           value={date}
           onChangeText={text => setDate(text)}
         />
-        {/* Time */}
         <TextInput
           style={styles.input}
           placeholder="Time"
           value={time}
           onChangeText={text => setTime(text)}
         />
-        {/* Location */}
         <TextInput
           style={styles.input}
           placeholder="Location"
           value={location}
           onChangeText={text => setLocation(text)}
         />
-        {/* Description */}
         <TextInput
           style={[styles.input, {height: 100, textAlignVertical: 'top'}]}
           placeholder="Description"
@@ -78,7 +87,6 @@ export default function CreateEvent({navigation}) {
           value={description}
           onChangeText={text => setDescription(text)}
         />
-        {/* Create Event Button */}
         <TouchableOpacity style={styles.button} onPress={handleCreateEvent}>
           <Text style={styles.buttonText}>Create Event</Text>
         </TouchableOpacity>
@@ -129,7 +137,6 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
   buttonText: {
-    // color: colors.primary,
     color: 'white',
     fontSize: 16,
     fontWeight: 'bold',
