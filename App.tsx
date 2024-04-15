@@ -10,6 +10,8 @@ import {createStackNavigator} from '@react-navigation/stack';
 import Routes from './src/navigation/Routes';
 import {ExpenseProvider} from './src/context/ExpenseContext';
 import Home from './src/screens/home';
+import CreateEvent from './src/screens/createEvent';
+import AllEvents from './src/screens/AllEvents';
 const Stack = createStackNavigator();
 
 export default function App() {
@@ -22,6 +24,20 @@ export default function App() {
               <Stack.Screen
                 name={Routes.TABNAVIGATOR}
                 component={Home}
+                options={{
+                  headerShown: false,
+                }}
+              />
+              <Stack.Screen
+                name={Routes.CREATEEVENT}
+                component={CreateEvent}
+                options={{
+                  headerShown: false,
+                }}
+              />
+              <Stack.Screen
+                name={Routes.ALLEVENTS}
+                component={AllEvents}
                 options={{
                   headerShown: false,
                 }}
