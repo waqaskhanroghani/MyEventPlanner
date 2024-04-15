@@ -12,7 +12,20 @@ This project is aimed at beginners who want to learn how to design screens and i
 - Profile screen to display user details and edit profile functionality
 
 ## Screenshots 
+1: Home screen
 ![Simulator Screen Shot - iPhone X - 2024-04-16 at 01 12 49](https://github.com/waqaskhanroghani/MyEventPlanner/assets/72159415/b301b318-1b69-46f3-95ea-e650e7d377ce)
+
+2: Add event 
+![Simulator Screen Shot - iPhone X - 2024-04-16 at 01 12 54](https://github.com/waqaskhanroghani/MyEventPlanner/assets/72159415/87a2f1d9-d01a-4ab6-bc67-7d26133161a4)
+
+3: Event List screen:
+![Simulator Screen Shot - iPhone X - 2024-04-16 at 01 12 59](https://github.com/waqaskhanroghani/MyEventPlanner/assets/72159415/1a91fadc-3399-48fe-a7de-40fda611e4a4)
+
+4: Setting screen
+![Simulator Screen Shot - iPhone X - 2024-04-16 at 01 13 06](https://github.com/waqaskhanroghani/MyEventPlanner/assets/72159415/dfae88ae-7b3e-49d7-8afb-5e23d3b5a54a)
+
+5: Profile screen
+![Simulator Screen Shot - iPhone X - 2024-04-16 at 01 13 10](https://github.com/waqaskhanroghani/MyEventPlanner/assets/72159415/2c205f11-a9bd-448b-acff-b36599803e2b)
 
 
 
