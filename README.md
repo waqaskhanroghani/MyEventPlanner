@@ -22,7 +22,7 @@ To get started with the project, follow these steps:
 1. Clone the repository to your local machine:
 
 ```
-git clone https://github.com/yourusername/react-native-event-planner.git
+git clone https://github.com/waqaskhanroghani/MyEventPlanner.git
 ```
 
 2. Install dependencies:
