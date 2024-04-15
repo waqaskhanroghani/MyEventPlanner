@@ -84,6 +84,7 @@ const styles = StyleSheet.create({
     flex: 1,
     width: '80%',
     paddingTop: 50,
+    marginTop: 80,
   },
   title: {
     color: 'white',
