@@ -13,10 +13,17 @@ import colors from '../../config/colors';
 export default function Profile({navigation}) {
   // Dummy user data
   const user = {
-    username: 'JohnDoe',
-    fullName: 'John Doe',
-    email: 'johndoe@example.com',
+    username: 'username',
+    fullName: 'username',
+    email: 'username@example.com',
     profilePic: require('../../Assets/images/bg2.png'),
+    bio: 'username dolor sit amet, consectetur adipiscing elit. Nulla convallis libero eget libero convallis, et iaculis mauris sollicitudin. Proin pharetra, nulla non facilisis dignissim.',
+  };
+
+  // Function to handle edit profile action
+  const handleEditProfile = () => {
+    // Navigate to edit profile screen
+    // You can implement your navigation logic here
   };
 
   return (
@@ -33,10 +40,15 @@ export default function Profile({navigation}) {
         <View style={styles.profileContainer}>
           <Image source={user.profilePic} style={styles.profilePic} />
           <Text style={styles.username}>{user.username}</Text>
-          <Text style={styles.fullName}>{user.fullName}</Text>
           <Text style={styles.email}>{user.email}</Text>
+          <Text style={styles.bio}>{user.bio}</Text>
+          {/* Edit Profile Button */}
+          <TouchableOpacity
+            style={styles.editButton}
+            onPress={handleEditProfile}>
+            <Text style={styles.editButtonText}>Edit Profile</Text>
+          </TouchableOpacity>
         </View>
-        {/* Add other profile details here */}
       </View>
     </ImageBackground>
   );
@@ -65,9 +77,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   profilePic: {
-    width: 100,
-    height: 100,
-    borderRadius: 50,
+    width: 120,
+    height: 120,
+    borderRadius: 60,
     marginBottom: 20,
   },
   username: {
@@ -82,6 +94,23 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
   email: {
+    color: 'white',
+    fontSize: 16,
+    marginBottom: 10,
+  },
+  bio: {
+    color: 'white',
+    fontSize: 14,
+    textAlign: 'center',
+    marginBottom: 20,
+  },
+  editButton: {
+    backgroundColor: colors.secondary,
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    borderRadius: 5,
+  },
+  editButtonText: {
     color: 'white',
     fontSize: 16,
   },
